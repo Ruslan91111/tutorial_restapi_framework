@@ -1,3 +1,14 @@
 from django.db import models
 
-# Create your models here.
+
+class Movies(models.Model):
+    title = models.CharField(max_length=255, verbose_name="Название фильма")
+
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        app_label = 'movies'
+
+
